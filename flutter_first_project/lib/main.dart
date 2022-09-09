@@ -10,20 +10,45 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var myName = "Bashaier AlMushaileh🫀";
+    var myName = "Bkmushaileh 🫀";
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.indigo,
+        appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 31, 12, 156),
+            title: Text(
+              "Home",
+              style: TextStyle(shadows: [
+                Shadow(
+                  color: Colors.black,
+                  blurRadius: 2.0,
+                  offset: Offset(2, 1),
+                )
+              ]),
+            ),
+            shadowColor: Colors.black),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print("Bashaier AlMushaileh is Watching you 🫀");
-          },
-          child: Icon(Icons.remove_red_eye),
-        ),
+            backgroundColor: Color.fromARGB(255, 8, 10, 122),
+            onPressed: () {
+              print("Bashaier AlMushaileh is Watching you 🫀");
+            },
+            child: Icon(Icons.remove_red_eye)),
         body: Center(
           child: Text(
             myName.toUpperCase(),
-            style: TextStyle(fontSize: 25.0, color: Colors.indigo),
+            style: TextStyle(
+                fontSize: 40.0,
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontFamily: 'Handlee',
+                fontWeight: FontWeight.bold,
+                shadows: [
+                  Shadow(
+                    color: Colors.black,
+                    blurRadius: 2.0,
+                    offset: Offset(2, 1),
+                  )
+                ]),
           ),
         ),
       ),
